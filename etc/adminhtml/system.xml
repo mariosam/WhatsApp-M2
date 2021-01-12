@@ -90,7 +90,7 @@
             </group>
             <!-- Group to talk with the clients of this module. -->
             <group id="whats_next_version" translate="label" type="text" sortOrder="999" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Expected for the next versions</label>
+                <label>Expected for the next WhatsApp versions</label>
                 <comment>
                     <![CDATA[Below a list of things that I expect to implement in the next version of WhatsApp module:]]>
                 </comment>

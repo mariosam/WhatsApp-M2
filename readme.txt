@@ -7,7 +7,7 @@
 The objective of this module is to present a floating contact button on the pages
 from the store for the customer to take their doubts via whatsapp.
 
-*** Version 1.0.0
+*** Version 1.0.0 - https://en.mariosam.eu/highlights/module-m2-whatsapp/
 
 What we have in this version:
 - possibility to include a WhatsApp contact number;
@@ -47,7 +47,7 @@ Stores > [Settings] Configuration > Mario SAM > WhatsApp
 Objetivo deste modulo é apresentar um botao de contato flutuante nas paginas
 da loja para o cliente tirar suas duvidas via whatsapp.
 
-*** Versao 1.0.0
+*** Versao 1.0.0 - https://mariosam.com.br/destaques/modulo-m2-whatsapp/
 
 O que temos nesta versao:
 - possibilidade de incluir um numero de whatsapp de contato;
