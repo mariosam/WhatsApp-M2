@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * XML default
+ * 
+ * @author      MarioSAM <eu@mariosam.com.br>
+ * @version     1.0.0
+ * @date        2020/11
+ * @copyright   Blog do Mario SAM
+ * 
+ * Insert the new file into the Magento theme to load the code.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!-- nao tem como colocar ifconfig no head :_( -->
+        <css src="MarioSAM_WhatsApp::css/whatsapp.css"/>
+    </head>
+    <body>
+        <!-- soon as the page start to loading -->
+        <referenceContainer name="after.body.start">
+            <block name="whatsapp_chat" template="MarioSAM_WhatsApp::chat.phtml" ifconfig="whatsapp/whats_config/enabled">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">MarioSAM\WhatsApp\ViewModel\WhatsAppViewModel</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

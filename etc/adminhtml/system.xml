@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * XML system
+ * 
+ * @author      MarioSAM <eu@mariosam.com.br>
+ * @version     1.0.0
+ * @date        2020/11
+ * @copyright   Blog do Mario SAM
+ * 
+ * This XML prepare the admin page config of this module.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <!-- Tab is the menu option at left [MARIOSAM] -->
+        <tab id="mariosam" translate="label" sortOrder="250">
+            <label>Mario SAM</label>
+        </tab>
+        <!-- Section is a sub-menu option inside Tab. -->
+        <section id="whatsapp" translate="label" sortOrder="800" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>WhatsApp</label>
+            <tab>mariosam</tab>
+            <!-- resource is to ACL -->
+            <resource>MarioSAM_WhatsApp::module_whatsapp_config</resource>
+            <!-- Group is the box at right with your config options. -->
+            <group id="whats_config" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>WhatsApp Settings</label>
+                <comment><![CDATA[How to use WhatsApp? Access the Mario SAM blog and read the post.]]></comment>
+                <!-- Turn On or Turn off this module -->
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <!-- Set the message to show the user about your policy -->
+                <field id="phone" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Phone Number</label>
+                    <validate>validate-number</validate>
+                    <comment>Whatsapp number: 55 48 98765 4321. (no spaces)</comment>
+                </field>
+                <!-- Set the message to show the user about your policy -->
+                <field id="button" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Message</label>
+                    <comment>Message next to the button (optional).</comment>
+                </field>
+                <!-- Set the message to show the user about your policy -->
+                <field id="welcome" translate="label" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Welcome Message</label>
+                    <comment>Message when chat opens (optional).</comment>
+                </field>
+                <!-- Set the message to show the user about your policy -->
+                <field id="url" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show URL</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Include site URL with the chat?</comment>
+                </field>
+            </group>
+            <!-- Group is the box at right with your config options. -->
+            <group id="whats_display" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>WhatsApp Frontend</label>
+                <!-- Turn On or Turn off this module -->
+                <field id="position" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Screen Position</label>
+                    <source_model>MarioSAM\WhatsApp\Model\Config\Source\Position</source_model>
+                    <comment>Choose your button position.</comment>
+                </field>
+                <!-- Set the message to show the user about your policy -->
+                <field id="device" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>ShowUp Device</label>
+                    <source_model>MarioSAM\WhatsApp\Model\Config\Source\Devices</source_model>
+                    <comment>Which device do you want to show up the button?</comment>
+                </field>
+                <!-- Set the message to show the user about your policy -->
+                <field id="button" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Color</label>
+                    <validate>validate-length minimum-length-3 maximum-length-6</validate>
+                    <comment>Insert your favorite color.</comment>
+                </field>
+                <!-- Set the message to show the user about your policy -->
+                <field id="css" translate="label" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom CSS</label>
+                    <comment>You can add personal css script.</comment>
+                </field>
+                <!-- Set the message to show the user about your policy -->
+                <field id="js" translate="label" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom JS</label>
+                    <comment>You can add personal javascript code.</comment>
+                </field>
+            </group>
+            <!-- Group to talk with the clients of this module. -->
+            <group id="whats_next_version" translate="label" type="text" sortOrder="999" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Expected for the next versions</label>
+                <comment>
+                    <![CDATA[Below a list of things that I expect to implement in the next version of WhatsApp module:]]>
+                </comment>
+                <field id="my_contact" translate="label" type="text" sortOrder="99" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>My Contact</label>
+                    <comment>You can talk with me and/or hire me!</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

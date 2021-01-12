@@ -1,0 +1,23 @@
+{
+    "name": "mariosam/module-whatsapp",
+    "version": "1.0.0",
+    "description": "Module to show up the whatsapp button chat on website.",
+    "type": "magento2-module",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "email": "eu@mariosam.com.br",
+            "name": "MarioSAM"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MarioSAM\\WhatsApp\\": ""
+        }
+    }
+}

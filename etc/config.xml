@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * XML config
+ * 
+ * @author      MarioSAM <eu@mariosam.com.br>
+ * @version     1.0.0
+ * @date        2020/11
+ * @copyright   Blog do Mario SAM
+ * 
+ * Set basic information to fields of this module.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <!-- Set default values for fields of this module -->
+        <whatsapp>
+            <whats_config>
+                <enabled>0</enabled>
+                <phone></phone>
+                <button><![CDATA[Need a help?]]></button>
+                <welcome></welcome>
+                <url>0</url>
+            </whats_config>
+            <whats_display>
+                <position>bottom-right</position>
+                <device>all</device>
+                <button>31D92B</button>
+                <css></css>
+                <js></js>
+            </whats_display>
+            <whats_next_version>
+               <my_contact>eu@mariosam.com.br</my_contact>
+            </whats_next_version>
+        </whatsapp>
+    </default>
+</config>

@@ -1,0 +1,50 @@
+<?php
+/**
+ * HTML chat
+ * 
+ * @author      MarioSAM <eu@mariosam.com.br>
+ * @version     1.0.0
+ * @date        2020/11
+ * @copyright   Blog do Mario SAM
+ * 
+ * Create button chat for whatsapp on website frontend.
+ */
+
+/** @var $viewModel MarioSAM\WhatsApp\ViewModel\WhatsAppViewModel */
+$viewModel = $block->getViewModel();
+
+if ( $viewModel->getEnabled() ) {
+//se o dispositivo mobile/desktop eh permitido (true) nas configuracoes
+if ( $viewModel->getDevice() ) {
+?>
+<?php /* CSS styles */ ?>
+<style type="text/css">
+<?php echo $viewModel->getCssCustom(); ?>
+</style>
+
+<?php /* Javascript controls */ ?>
+<script type="text/javascript">
+//<![CDATA[
+require([
+    'jquery'
+], function ($) {
+    $(document).ready(function () {
+        <?php echo $viewModel->getJsCustom(); ?>
+    });
+});
+//]]>
+</script>
+
+<?php /* HTLM displays  */ ?>
+<!-- button -->
+<a target="_blank" href="<?php echo $viewModel->getUrl(); ?>" class="float float-<?php echo $viewModel->getPosition(); ?> float-floating" style="background-color: #<?php echo $viewModel->getButtonColor(); ?>">
+    <i class="whatsapp-icon-3x" style="padding-right:0px!important;"></i>
+</a>
+<!-- text -->
+<div class="label-container label-container-<?php echo $viewModel->getPosition(); ?> float-floating">
+    <div class="label-text"><?php echo $viewModel->getButtonMessage(); ?></div>
+    <i class="icon icon-play label-arrow"></i>
+</div>
+
+<?php } /* if do device */ ?>
+<?php } /* getEnabled */ ?>
